@@ -2,19 +2,16 @@
 
 ## usersテーブル
 
-| Column             | Type    | Options                        |
-| ------------------ | ------- | ------------------------------ |
-| email              | string  | null: false, unique constraint |
-| password           | string  | null: false                    |
-| encrypted_password | string  | null: false                    |
-| nickname           | string  | null: false                    |
-| last_name          | string  | null: false                    |
-| first_name         | string  | null: false                    |
-| last_pronounce     | string  | null: false                    |
-| first_pronounce    | string  | null: false                    |
-| birth_year_id      | integer | null: false                    |
-| birth_month_id     | integer | null: false                    |
-| birth_day_id       | integer | null: false                    |
+| Column             | Type    | Options                   |
+| ------------------ | ------- | ------------------------- |
+| email              | string  | null: false, unique: true |
+| encrypted_password | string  | null: false               |
+| nickname           | string  | null: false               |
+| last_name          | string  | null: false               |
+| first_name         | string  | null: false               |
+| last_pronounce     | string  | null: false               |
+| first_pronounce    | string  | null: false               |
+| birth_day          | date    | null: false               |
  
 ### アソシエーション
 
@@ -26,11 +23,11 @@
 | Column           | Type       | Options                         |
 | ---------------- | ---------- | ------------------------------- |
 | item_name        | string     | null: false                     |
-| description_id   | text       | null: false                     |
+| description      | text       | null: false                     |
 | category_id      | integer    | null: false                     |
 | condition_id     | integer    | null: false                     |
 | postage_payer_id | integer    | null: false                     |
-| shipping_from_id | integer    | null: false                     |
+| prefecture_id    | integer    | null: false                     |
 | shipping_date_id | integer    | null: false                     |
 | price            | integer    | null: false                     |
 | user             | references | null: false, foreign_key: true  |
