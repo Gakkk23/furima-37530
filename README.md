@@ -50,7 +50,7 @@
 - belongs_to :market
 - has_one :shipping
 
-## shippingテーブル
+## shippingsテーブル
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
